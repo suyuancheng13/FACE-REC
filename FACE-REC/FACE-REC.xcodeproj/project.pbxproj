@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5706D3B1AC3D8EB008A9376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5706D3A1AC3D8EB008A9376 /* UIKit.framework */; };
+		E5706D3D1AC3D8EB008A9376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5706D3C1AC3D8EB008A9376 /* Foundation.framework */; };
+		E5706D3F1AC3D8EB008A9376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5706D3E1AC3D8EB008A9376 /* CoreGraphics.framework */; };
+		E5706D451AC3D8EB008A9376 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E5706D431AC3D8EB008A9376 /* InfoPlist.strings */; };
+		E5706D471AC3D8EB008A9376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5706D461AC3D8EB008A9376 /* main.m */; };
+		E5706D4B1AC3D8EB008A9376 /* FCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5706D4A1AC3D8EB008A9376 /* FCAppDelegate.m */; };
+		E5706D4E1AC3D8EB008A9376 /* FCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5706D4D1AC3D8EB008A9376 /* FCViewController.m */; };
+		E5706D511AC3D8EB008A9376 /* FCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5706D4F1AC3D8EB008A9376 /* FCViewController.xib */; };
+		E5706D5F1AC3E1E0008A9376 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5706D5E1AC3E1E0008A9376 /* MobileCoreServices.framework */; };
+		E5706D851AC43ACF008A9376 /* FCCameraOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5706D841AC43ACF008A9376 /* FCCameraOverLayer.m */; };
+		E59ABC311AC7E96800AFE55A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC301AC7E96800AFE55A /* CoreImage.framework */; };
+		E59ABC341AC7EE3C00AFE55A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */; };
+		E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */; };
+		E59C8BC91AC4EADD00B720D7 /* IMG_1328.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E5706D361AC3D8EB008A9376 /* FACE-REC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FACE-REC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5706D3A1AC3D8EB008A9376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E5706D3C1AC3D8EB008A9376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E5706D3E1AC3D8EB008A9376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E5706D421AC3D8EB008A9376 /* FACE-REC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FACE-REC-Info.plist"; sourceTree = "<group>"; };
+		E5706D441AC3D8EB008A9376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E5706D461AC3D8EB008A9376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5706D481AC3D8EB008A9376 /* FACE-REC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FACE-REC-Prefix.pch"; sourceTree = "<group>"; };
+		E5706D491AC3D8EB008A9376 /* FCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCAppDelegate.h; sourceTree = "<group>"; };
+		E5706D4A1AC3D8EB008A9376 /* FCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCAppDelegate.m; sourceTree = "<group>"; };
+		E5706D4C1AC3D8EB008A9376 /* FCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCViewController.h; sourceTree = "<group>"; };
+		E5706D4D1AC3D8EB008A9376 /* FCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCViewController.m; sourceTree = "<group>"; };
+		E5706D501AC3D8EB008A9376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FCViewController.xib; sourceTree = "<group>"; };
+		E5706D5E1AC3E1E0008A9376 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E5706D831AC43ACF008A9376 /* FCCameraOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCCameraOverLayer.h; path = ../FCCameraOverLayer.h; sourceTree = "<group>"; };
+		E5706D841AC43ACF008A9376 /* FCCameraOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCCameraOverLayer.m; path = ../FCCameraOverLayer.m; sourceTree = "<group>"; };
+		E59ABC301AC7E96800AFE55A /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E59ABC351AC7F5E600AFE55A /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
+		E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1328.JPG; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5706D331AC3D8EB008A9376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E59ABC341AC7EE3C00AFE55A /* QuartzCore.framework in Frameworks */,
+				E59ABC311AC7E96800AFE55A /* CoreImage.framework in Frameworks */,
+				E5706D5F1AC3E1E0008A9376 /* MobileCoreServices.framework in Frameworks */,
+				E5706D3B1AC3D8EB008A9376 /* UIKit.framework in Frameworks */,
+				E5706D3D1AC3D8EB008A9376 /* Foundation.framework in Frameworks */,
+				E5706D3F1AC3D8EB008A9376 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5706D2B1AC3D8EB008A9376 = {
+			isa = PBXGroup;
+			children = (
+				E5706D401AC3D8EB008A9376 /* FACE-REC */,
+				E5706D391AC3D8EB008A9376 /* Frameworks */,
+				E5706D371AC3D8EB008A9376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5706D371AC3D8EB008A9376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5706D361AC3D8EB008A9376 /* FACE-REC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5706D391AC3D8EB008A9376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */,
+				E59ABC301AC7E96800AFE55A /* CoreImage.framework */,
+				E5706D5E1AC3E1E0008A9376 /* MobileCoreServices.framework */,
+				E5706D3A1AC3D8EB008A9376 /* UIKit.framework */,
+				E5706D3C1AC3D8EB008A9376 /* Foundation.framework */,
+				E5706D3E1AC3D8EB008A9376 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5706D401AC3D8EB008A9376 /* FACE-REC */ = {
+			isa = PBXGroup;
+			children = (
+				E5706D831AC43ACF008A9376 /* FCCameraOverLayer.h */,
+				E5706D841AC43ACF008A9376 /* FCCameraOverLayer.m */,
+				E5706D491AC3D8EB008A9376 /* FCAppDelegate.h */,
+				E5706D4A1AC3D8EB008A9376 /* FCAppDelegate.m */,
+				E5706D4C1AC3D8EB008A9376 /* FCViewController.h */,
+				E5706D4D1AC3D8EB008A9376 /* FCViewController.m */,
+				E5706D4F1AC3D8EB008A9376 /* FCViewController.xib */,
+				E5706D411AC3D8EB008A9376 /* Supporting Files */,
+			);
+			path = "FACE-REC";
+			sourceTree = "<group>";
+		};
+		E5706D411AC3D8EB008A9376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E59ABC351AC7F5E600AFE55A /* UIImage+fixOrientation.h */,
+				E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */,
+				E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */,
+				E5706D421AC3D8EB008A9376 /* FACE-REC-Info.plist */,
+				E5706D431AC3D8EB008A9376 /* InfoPlist.strings */,
+				E5706D461AC3D8EB008A9376 /* main.m */,
+				E5706D481AC3D8EB008A9376 /* FACE-REC-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5706D351AC3D8EB008A9376 /* FACE-REC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5706D541AC3D8EB008A9376 /* Build configuration list for PBXNativeTarget "FACE-REC" */;
+			buildPhases = (
+				E5706D321AC3D8EB008A9376 /* Sources */,
+				E5706D331AC3D8EB008A9376 /* Frameworks */,
+				E5706D341AC3D8EB008A9376 /* Resources */,
+				E5706D601AC3E5E2008A9376 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FACE-REC";
+			productName = "FACE-REC";
+			productReference = E5706D361AC3D8EB008A9376 /* FACE-REC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5706D2D1AC3D8EB008A9376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FC;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = E5706D301AC3D8EB008A9376 /* Build configuration list for PBXProject "FACE-REC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E5706D2B1AC3D8EB008A9376;
+			productRefGroup = E5706D371AC3D8EB008A9376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5706D351AC3D8EB008A9376 /* FACE-REC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5706D341AC3D8EB008A9376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5706D451AC3D8EB008A9376 /* InfoPlist.strings in Resources */,
+				E5706D511AC3D8EB008A9376 /* FCViewController.xib in Resources */,
+				E59C8BC91AC4EADD00B720D7 /* IMG_1328.JPG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E5706D601AC3E5E2008A9376 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5706D321AC3D8EB008A9376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5706D471AC3D8EB008A9376 /* main.m in Sources */,
+				E5706D4B1AC3D8EB008A9376 /* FCAppDelegate.m in Sources */,
+				E5706D4E1AC3D8EB008A9376 /* FCViewController.m in Sources */,
+				E5706D851AC43ACF008A9376 /* FCCameraOverLayer.m in Sources */,
+				E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E5706D431AC3D8EB008A9376 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5706D441AC3D8EB008A9376 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E5706D4F1AC3D8EB008A9376 /* FCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5706D501AC3D8EB008A9376 /* en */,
+			);
+			name = FCViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5706D521AC3D8EB008A9376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E5706D531AC3D8EB008A9376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5706D551AC3D8EB008A9376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FACE-REC/FACE-REC-Prefix.pch";
+				INFOPLIST_FILE = "FACE-REC/FACE-REC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E5706D561AC3D8EB008A9376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FACE-REC/FACE-REC-Prefix.pch";
+				INFOPLIST_FILE = "FACE-REC/FACE-REC-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5706D301AC3D8EB008A9376 /* Build configuration list for PBXProject "FACE-REC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5706D521AC3D8EB008A9376 /* Debug */,
+				E5706D531AC3D8EB008A9376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5706D541AC3D8EB008A9376 /* Build configuration list for PBXNativeTarget "FACE-REC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5706D551AC3D8EB008A9376 /* Debug */,
+				E5706D561AC3D8EB008A9376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5706D2D1AC3D8EB008A9376 /* Project object */;
+}
