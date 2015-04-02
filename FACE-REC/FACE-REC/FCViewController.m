@@ -8,20 +8,17 @@
 
 #import "FCViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-@interface FCViewController ()
 
-@end
 
 @implementation FCViewController
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    imageShow = [[UIImageView alloc]init];
-    [imageShow setFrame:CGRectMake(10, 6, 310, 388)];
-    [imageShow setBounds:CGRectMake(0, 0, 310, 388)];
-    [self.view addSubview:imageShow];
+    _imageShow = [[UIImageView alloc]init];
+    [_imageShow setFrame:CGRectMake(10, 6, 310, 388)];
+    [_imageShow setBounds:CGRectMake(0, 0, 310, 388)];
+    [self.view addSubview:_imageShow];
     //imageShow = [[UIImageView alloc]init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -38,15 +35,21 @@
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
+#pragma mark- functions about capture detect and recongnize
 - (IBAction)CaptureImage:(id)sender {
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc]init];
     imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-//    imagePicker.mediaTypes = ns
     imagePicker.allowsEditing= YES;
     imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
     imagePicker.delegate = self;
     [self presentViewController:imagePicker animated:YES completion:^{}];
+}
+
+- (IBAction)recognizeFace:(id)sender {
+}
+
+- (IBAction)trainFace:(id)sender {
 }
 - (UIImage*)convert2gray:(UIImage*)sourceImage
 {
@@ -64,44 +67,81 @@
     return _grayImage;  
 }
 
-- (void)faceDectect:(UIImage *)image
+/*
+ *Use the core image to detect the face partition
+ */
+- (void)faceDetect:(UIImage *)image
 {
     CIImage *_image = [CIImage imageWithCGImage:image.CGImage];
     CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:[NSDictionary dictionaryWithObject:CIDetectorAccuracyHigh forKey:CIDetectorAccuracy]];
     NSArray *features = [detector featuresInImage:_image];
     if([features count]==0)
     {
-    UIAlertView *alter =[[UIAlertView alloc]initWithTitle:@"REC ERROR" message:@"no Face Found " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alter show];
+        UIAlertView *alter =[[UIAlertView alloc]initWithTitle:@"REC ERROR" message:@"no Face Found " delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alter show];
     }
     
     for(CIFaceFeature *faceObj in features)
     {
 
         /*
-         caution: the faceObj is in 笛卡尔 coordinate
+         *caution: the faceObj is in 笛卡尔 coordinate
          */
         CGRect modifiedFaceBounds = faceObj.bounds;
         modifiedFaceBounds.origin.y = image.size.height-faceObj.bounds.size.height-faceObj.bounds.origin.y;
-         cropedImage = CGImageCreateWithImageInRect([image CGImage], modifiedFaceBounds);
-
-         [imageShow setImage:[UIImage imageWithCGImage:cropedImage]];
-
+        _cropedImage = CGImageCreateWithImageInRect([image CGImage], modifiedFaceBounds);
+        _cropedUIImage = [UIImage imageWithCGImage:_cropedImage];
+        CGImageRelease(_cropedImage);
+        [self extractFeature];
         
-        CGImageRelease(cropedImage);
+        /*
+         *caculate the scale to add red rectangle
+         */
+        float widthScale = _imageShow.frame.size.width/image.size.width;
+        float heightScale = _imageShow.frame.size.height/image.size.height;
+        modifiedFaceBounds.size.width *= widthScale;
+        modifiedFaceBounds.size.height *= heightScale;
+        modifiedFaceBounds.origin.x *= widthScale;
+        modifiedFaceBounds.origin.y *= heightScale;
+        [self addFaceFrame:modifiedFaceBounds];
+
+//         [imageShow setImage:[UIImage imageWithCGImage:cropedImage]];
+
+       
     }
    
 }
 - (void)addFaceFrame:(CGRect)rect
 {
 
+    for(UIView *sub in [_imageShow subviews])
+    {
+        [sub removeFromSuperview];
+    }
     UIAlertView *alter =[[UIAlertView alloc]initWithTitle:@"Face Found!!" message:NSStringFromCGRect(rect) delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alter show];
     UIView *subView = [[UIView alloc]initWithFrame:rect];
     subView.layer.borderWidth = 4;
     subView.layer.borderColor =[[UIColor redColor]CGColor ];
-    subView.backgroundColor = [UIColor redColor];
-    [imageShow addSubview:subView];
+    
+    [_imageShow addSubview:subView];
+}
+
+/*
+ *The main process in FACE REC
+ */
+- (void)extractFeature
+{
+    /*
+     *step 1: convert the image to gray image
+     */
+    _cropedUIImage =[self convert2gray:_cropedUIImage];
+    /*
+     *step 2: get texture features by LBP
+     */
+    _lbpHistogram = [_lbpEngine LBP:_cropedUIImage];
+    
+    
 }
 #pragma mark- UIImagePickerControllerDelegate
 /*
@@ -119,9 +159,13 @@
         
         UIImage* original_image = [info objectForKey:@"UIImagePickerControllerOriginalImage"]; 
         UIImage* image = [info objectForKey: @"UIImagePickerControllerEditedImage"];
-        grayImage = original_image;// [self convert2gray:original_image] ;
-        grayImage = [grayImage fixOrientation];
-        [self faceDectect:grayImage];
+        _captureImage = original_image;
+        _captureImage = [_captureImage fixOrientation];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [_imageShow setImage:nil];
+            [_imageShow setImage:_captureImage];
+        });
+        [self faceDetect:_captureImage];
         
 
     }  
@@ -130,7 +174,7 @@
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    dispatch_async(dispatch_get_main_queue(), ^{[imageShow setImage:[UIImage imageNamed:@"IMG_1328.JPG"]];});
+    dispatch_async(dispatch_get_main_queue(), ^{[_imageShow setImage:[UIImage imageNamed:@"IMG_1328.JPG"]];});
      
     [picker dismissModalViewControllerAnimated:YES];
     

@@ -20,6 +20,8 @@
 		E59ABC311AC7E96800AFE55A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC301AC7E96800AFE55A /* CoreImage.framework */; };
 		E59ABC341AC7EE3C00AFE55A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */; };
 		E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */; };
+		E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */; };
+		E59ABC421AC8D16200AFE55A /* FCBPNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */; };
 		E59C8BC91AC4EADD00B720D7 /* IMG_1328.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,10 @@
 		E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E59ABC351AC7F5E600AFE55A /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
 		E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
+		E59ABC3C1AC8D04200AFE55A /* FCLBPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLBPEngine.h; sourceTree = "<group>"; };
+		E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLBPEngine.m; sourceTree = "<group>"; };
+		E59ABC401AC8D16200AFE55A /* FCBPNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCBPNetWork.h; sourceTree = "<group>"; };
+		E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCBPNetWork.m; sourceTree = "<group>"; };
 		E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1328.JPG; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -67,6 +73,7 @@
 		E5706D2B1AC3D8EB008A9376 = {
 			isa = PBXGroup;
 			children = (
+				E59ABC3F1AC8D05C00AFE55A /* Face Engine */,
 				E5706D401AC3D8EB008A9376 /* FACE-REC */,
 				E5706D391AC3D8EB008A9376 /* Frameworks */,
 				E5706D371AC3D8EB008A9376 /* Products */,
@@ -121,6 +128,17 @@
 				E5706D481AC3D8EB008A9376 /* FACE-REC-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E59ABC3F1AC8D05C00AFE55A /* Face Engine */ = {
+			isa = PBXGroup;
+			children = (
+				E59ABC3C1AC8D04200AFE55A /* FCLBPEngine.h */,
+				E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */,
+				E59ABC401AC8D16200AFE55A /* FCBPNetWork.h */,
+				E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */,
+			);
+			name = "Face Engine";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +227,8 @@
 				E5706D4E1AC3D8EB008A9376 /* FCViewController.m in Sources */,
 				E5706D851AC43ACF008A9376 /* FCCameraOverLayer.m in Sources */,
 				E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */,
+				E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.m in Sources */,
+				E59ABC421AC8D16200AFE55A /* FCBPNetWork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

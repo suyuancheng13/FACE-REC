@@ -10,16 +10,25 @@
 #import <CoreImage/CoreImage.h>
 #import <QuartzCore/QuartzCore.h>
 #import "UIImage+fixOrientation.h"
+#import "FCLBPEngine.h"
+
 @interface FCViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 {
-    UIImage * grayImage;
-    UIImageView *imageShow;
-    CGImageRef cropedImage;
+    UIImage * _captureImage;
+    UIImageView *_imageShow;
+    CGImageRef _cropedImage;
+    UIImage *_cropedUIImage;
+    
+    FCLBPEngine *_lbpEngine;
+    NSArray *_lbpHistogram 
 }
 
 - (IBAction)CaptureImage:(id)sender;
-- (UIImage*)convert2gray:(UIImage*)image;
-- (void)faceDectect:(UIImage *)image;
-- (void)addFaceFrame:(CGRect)rect;
+- (IBAction)recognizeFace:(id)sender;
+- (IBAction)trainFace:(id)sender;
 
+- (UIImage*)convert2gray:(UIImage*)image;
+- (void)faceDetect:(UIImage *)image;
+- (void)addFaceFrame:(CGRect)rect;
+- (void)extractFeature;
 @end
