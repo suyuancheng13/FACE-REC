@@ -20,9 +20,10 @@
 		E59ABC311AC7E96800AFE55A /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC301AC7E96800AFE55A /* CoreImage.framework */; };
 		E59ABC341AC7EE3C00AFE55A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */; };
 		E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */; };
-		E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */; };
+		E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.mm */; };
 		E59ABC421AC8D16200AFE55A /* FCBPNetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */; };
 		E59C8BC91AC4EADD00B720D7 /* IMG_1328.JPG in Resources */ = {isa = PBXBuildFile; fileRef = E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */; };
+		E5C898A91AEA795D0038247C /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5C898A81AEA795D0038247C /* opencv2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +48,11 @@
 		E59ABC351AC7F5E600AFE55A /* UIImage+fixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fixOrientation.h"; sourceTree = "<group>"; };
 		E59ABC361AC7F5E600AFE55A /* UIImage+fixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fixOrientation.m"; sourceTree = "<group>"; };
 		E59ABC3C1AC8D04200AFE55A /* FCLBPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLBPEngine.h; sourceTree = "<group>"; };
-		E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLBPEngine.m; sourceTree = "<group>"; };
+		E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = FCLBPEngine.mm; sourceTree = "<group>"; };
 		E59ABC401AC8D16200AFE55A /* FCBPNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCBPNetWork.h; sourceTree = "<group>"; };
 		E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCBPNetWork.m; sourceTree = "<group>"; };
 		E59C8BC81AC4EADD00B720D7 /* IMG_1328.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1328.JPG; sourceTree = SOURCE_ROOT; };
+		E5C898A81AEA795D0038247C /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5C898A91AEA795D0038247C /* opencv2.framework in Frameworks */,
 				E59ABC341AC7EE3C00AFE55A /* QuartzCore.framework in Frameworks */,
 				E59ABC311AC7E96800AFE55A /* CoreImage.framework in Frameworks */,
 				E5706D5F1AC3E1E0008A9376 /* MobileCoreServices.framework in Frameworks */,
@@ -91,6 +94,7 @@
 		E5706D391AC3D8EB008A9376 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E5C898A81AEA795D0038247C /* opencv2.framework */,
 				E59ABC331AC7EE3C00AFE55A /* QuartzCore.framework */,
 				E59ABC301AC7E96800AFE55A /* CoreImage.framework */,
 				E5706D5E1AC3E1E0008A9376 /* MobileCoreServices.framework */,
@@ -134,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E59ABC3C1AC8D04200AFE55A /* FCLBPEngine.h */,
-				E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.m */,
+				E59ABC3D1AC8D04200AFE55A /* FCLBPEngine.mm */,
 				E59ABC401AC8D16200AFE55A /* FCBPNetWork.h */,
 				E59ABC411AC8D16200AFE55A /* FCBPNetWork.m */,
 			);
@@ -227,7 +231,7 @@
 				E5706D4E1AC3D8EB008A9376 /* FCViewController.m in Sources */,
 				E5706D851AC43ACF008A9376 /* FCCameraOverLayer.m in Sources */,
 				E59ABC371AC7F5E600AFE55A /* UIImage+fixOrientation.m in Sources */,
-				E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.m in Sources */,
+				E59ABC3E1AC8D04200AFE55A /* FCLBPEngine.mm in Sources */,
 				E59ABC421AC8D16200AFE55A /* FCBPNetWork.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +306,11 @@
 		E5706D551AC3D8EB008A9376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FACE-REC/FACE-REC-Prefix.pch";
 				INFOPLIST_FILE = "FACE-REC/FACE-REC-Info.plist";
@@ -313,6 +322,11 @@
 		E5706D561AC3D8EB008A9376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LIBRARY = "compiler-default";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FACE-REC/FACE-REC-Prefix.pch";
 				INFOPLIST_FILE = "FACE-REC/FACE-REC-Info.plist";

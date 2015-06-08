@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#import "opencv2/opencv.hpp"
+
 @interface FCLBPEngine : NSObject
 - (NSArray*)LBP:(UIImage*)image;
 @end
